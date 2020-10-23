@@ -12,10 +12,23 @@
      box-sizing: border-box;
  }
 
+ a {
+   color: black;
+ }
+ 
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
+
+  ul,
+  ol,
+  li {
+    list-style: none;
+    padding: 0px;
+  }
+
+
   
   /* Sections
      ========================================================================== */

@@ -1,0 +1,122 @@
+html {
+  font-size: 18px;
+  color: black !important;
+}
+
+.navbar {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar-dropdown {
+  display: flex;
+}
+
+.MINE-whole {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.MINE-table-of-contents {
+  border: 1px black solid;
+  padding: 2rem;
+  width: 15%;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+  color: #2a9607;
+}
+
+.MINE-big-title {
+  text-align: center;
+}
+
+.MINE-nav-buttons {
+  padding-top: 3rem;
+}
+
+.help {
+  background-color: rgba(255, 255, 255, 0.726);
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+.MINE-rundown {
+  border: 1px black solid;
+  padding: 2rem;
+  width: 15%;
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+  order: 2;
+}
+
+.MINE-middle-column {
+  background-color: #182e00;
+  padding: 3rem;
+}
+
+.MINE-nav-buttons {
+  display: flex;
+}
+
+.MINE-button {
+  width: 60%;
+}
+
+@media (min-width: 800px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@media (max-width: 800px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  .MINE-whole {
+    display: inline;
+  }
+
+  .MINE-dropdown-button {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .MINE-rundown {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    width: 90%;
+  }
+
+  .MINE-rundown-list,
+.MINE-rundown-links {
+    width: 40%;
+    padding: 0rem;
+    margin: auto;
+  }
+
+  .MINE-nav-buttons {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .MINE-button {
+    width: 50%;
+  }
+
+  .bulk {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}

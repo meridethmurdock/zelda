@@ -1,0 +1,12 @@
+/* @media (max-width: 800px) {
+.table-of-contents,
+.searchbar {
+    display: none;
+}
+}
+
+@media (min-width: 801px) {
+    .dropdown {
+        display: none;
+    }
+} */
