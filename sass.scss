@@ -3,30 +3,56 @@ $break-xs: 499px;
 $break-s: 600px;
 $break-m: 800px;
 $break-l: 1000px;
+$break-xl: 1300px;
+
+$link-green: rgba(222, 233, 220, 0.726);
+$fun-font: 'Turret Road', cursive;
 
 @mixin boxes { 
     border: 1px black solid;
+    border-radius: 10px;
     padding: 2rem;
-    width: 15%;
+    width: 28%;
     margin: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    height: 0%;
+    height: 10%;
+    background-color: $link-green !important;
+    font-family: $fun-font;
 }
 
-// $link-green: rgb(11, 65, 0);
 
 // styling
 
 html {
-    font-size: 18px;
     color: black !important;
 }
+
+h3 {
+    padding-top: 5rem;
+}
+
+button {
+    color: black !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .navbar {
     padding: 2rem 1rem;
     display: flex;
     justify-content: space-evenly;
+    background-color: rgb(245, 227, 227) !important;
+    font-family: $fun-font;
+    font-size: 2.5rem;
 }
+
+.navbar-brand {
+    font-size: inherit;
+}
+
     .navbar-dropdown {
         display: flex;
     }
@@ -35,12 +61,13 @@ html {
 .MINE-whole {
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
 }
 
     .MINE-table-of-contents {
         @include boxes;
-        color: rgb(42, 150, 7);
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
     .MINE-big-title {
         text-align: center;
@@ -48,18 +75,22 @@ html {
     .MINE-nav-buttons {
         padding-top: 3rem;
     }
-    .help {
-        background-color: rgba(255, 255, 255, 0.726);
+    .MINE-title-nav {
+        background-color: $link-green;
         margin: 1rem;
+        margin-bottom: 5rem;
         border-radius: 10px;
         padding: 3rem;
+        border: 3px darkslategrey solid;
     }
     .MINE-rundown {
         @include boxes;
         order: 2;
+        font-size: 1.2rem;
+        line-height: 3rem;
     }
     .MINE-middle-column {
-        background-color: rgb(24, 46, 0);
+        background-color: rgba(38, 58, 17, 0.685);
         padding: 3rem;
     }
 
@@ -71,15 +102,39 @@ html {
                 width: 60%;
             }
 
+        .bulk {
+            background-color: $link-green;
+            margin: 2rem;
+            padding: 5rem;
+            border-radius: 10px;
+            font-size: 1.3rem !important;
+            margin: 0 auto;
+        }
+
+
+        .bulk-pics {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-self: center;
+            padding: 3rem;
+        }
+
 
 // media queries
 
-@media (min-width: $break-m) {
+@media (min-width: $break-xl) {
     .hidden-desktop {
         display: none !important;
     }
 }
-@media (max-width: $break-m) {
+
+@media (max-width: $break-xl) {
+    .navbar {
+        // font-size: 1rem;
+    }
+}
+@media (max-width: $break-xl) {
     .hidden-mobile {
         display: none !important;
     }
@@ -87,13 +142,31 @@ html {
     .MINE-whole {
         display: inline;
     }
+    hr {
+        display: none;
+    }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        padding-top: 1rem;
+    }
+    .navbar {
+        font-size: 2rem;
+    }
             .MINE-dropdown-button {
                 display: block;
                 width: 100%;
                 margin: 0 auto;
+                border: 2px green solid;
+                padding: 1rem;
             }
 
+        .MINE-title-nav {
+            margin: 1rem;
+        }
         .MINE-rundown {
             margin: 3rem auto;
             display: flex;
@@ -113,6 +186,7 @@ html {
                 margin: 1rem auto;
                 display: flex;
                 justify-content: space-between;
+                padding: 1rem;
             }
 
         .MINE-button {
@@ -120,9 +194,31 @@ html {
         }
 
     .bulk {
-        padding: 0px 20px;
         display: flex;
         flex-direction: column;
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .bulk-pics {
+        padding: .5rem;
+
+    }
+    .navbar {
+        font-size: 1rem;
+        line-height: 1rem;
+
+    }
+    .MINE-rundown {
+        line-height: 1rem;
+    }
+    h2 {
+        font-size: 1rem;
+    } 
+    li { 
+        font-size: .5rem;
     }
 
 }
