@@ -215,6 +215,10 @@ a:hover {
     margin: auto;
   }
 
+  .rundown-img {
+    width: 20%;
+  }
+
   .bulk {
     display: flex;
     flex-direction: column;
