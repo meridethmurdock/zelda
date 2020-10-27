@@ -1,9 +1,9 @@
 // sass variables
 $break-xs: 499px;
-$break-s: 600px;
-$break-m: 800px;
-$break-l: 1000px;
-$break-xl: 1300px;
+$break-s: 575px;
+$break-m: 767px;
+$break-l: 991px;
+$break-xl: 1199px;
 
 $link-green: rgba(222, 233, 220, 0.726);
 $fun-font: 'Turret Road', cursive;
@@ -11,7 +11,7 @@ $fun-font: 'Turret Road', cursive;
 @mixin boxes { 
     border: 1px black solid;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 28%;
     margin: 3rem 2rem;
     display: flex;
@@ -21,56 +21,46 @@ $fun-font: 'Turret Road', cursive;
     font-family: $fun-font;
 }
 
-
-// styling
-
 html {
     color: black !important;
 }
-
+h2 {
+    font-size: 1.6rem;
+}
 h3 {
     padding-top: 5rem;
 }
-
 button {
     color: black !important;
 }
-
 a:hover {
     text-decoration: none;
 }
 
 .navbar {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(245, 227, 227) !important;
     font-family: $fun-font;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
-
-.navbar-brand {
-    font-size: inherit;
-}
-
-    .navbar-dropdown {
-        display: flex;
+    .navbar-brand {
+        font-size: inherit;
     }
-
+        .navbar-dropdown {
+            display: flex;
+        }
 
 .MINE-whole {
     display: flex;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
 }
-
     .MINE-table-of-contents {
         @include boxes;
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-    .MINE-big-title {
-        text-align: center;
+        font-size: 1.1rem;
+        line-height: 2.5rem;
     }
     .MINE-nav-buttons {
         padding-top: 3rem;
@@ -78,47 +68,76 @@ a:hover {
     .MINE-title-nav {
         background-color: $link-green;
         margin: 1rem;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         border-radius: 10px;
-        padding: 3rem;
+        padding: 2rem;
         border: 3px darkslategrey solid;
     }
+        .MINE-big-title {
+            text-align: center;
+        }
+
     .MINE-rundown {
         @include boxes;
         order: 2;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 3rem;
     }
+        .rundown-img {
+            width: 10%;
+        }
+
     .MINE-middle-column {
         background-color: rgba(38, 58, 17, 0.685);
-        padding: 3rem;
+        padding: 2rem;
     }
-
         .MINE-nav-buttons {
             display: flex;
         }
-
             .MINE-button {
-                width: 60%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .prev-icon,
+            .next-icon {
+                opacity: 40%;
+                width: 8%;
+            }
+            .next-icon {
+                transform: rotate(180deg);
             }
 
         .bulk {
             background-color: $link-green;
             margin: 2rem;
-            padding: 5rem;
+            padding: 3rem;
             border-radius: 10px;
-            font-size: 1.3rem !important;
+            font-size: 1.3rem;
             margin: 0 auto;
         }
-
-
-        .bulk-pics {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            justify-self: center;
-            padding: 3rem;
+            .bulk-pics {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-self: center;
+                padding: 3rem;
+            }
+        .nav-buttons-end {
+            padding: 0rem;
+            margin: 2rem !important;
+            background-color: $link-green;
+            border-radius: 10px;
         }
+
+.footer {
+    background-color: $link-green;
+    width: 100;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
 // media queries
@@ -138,16 +157,8 @@ a:hover {
     .hidden-mobile {
         display: none !important;
     }
-    
-    .MINE-whole {
-        display: inline;
-    }
     hr {
         display: none;
-    }
-
-    h2 {
-        font-size: 1.5rem;
     }
 
     p {
@@ -156,14 +167,25 @@ a:hover {
     .navbar {
         font-size: 2rem;
     }
-            .MINE-dropdown-button {
-                display: block;
-                width: 100%;
-                margin: 0 auto;
-                border: 2px green solid;
-                padding: 1rem;
+    .MINE-whole {
+        display: inline;
+    }
+        .MINE-dropdown-button {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            border: 2px green solid;
+            padding: 1rem;
+        }
+        .MINE-nav-buttons {
+            margin: 1rem auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+            .MINE-button {
+                width: 50%;
             }
-
         .MINE-title-nav {
             margin: 1rem;
         }
@@ -174,51 +196,37 @@ a:hover {
             border: 1px black solid;
             width: 90%;
         }
-
             .MINE-rundown-list,
             .MINE-rundown-links {
                 width: 40%;
                 padding: 0rem;
                 margin: auto;
             }
-
-            .MINE-nav-buttons {
-                margin: 1rem auto;
-                display: flex;
-                justify-content: space-between;
-                padding: 1rem;
-            }
-
-        .MINE-button {
-            width: 50%;
+                .rundown-img {
+                    // width: 20%;
+                }
+        .bulk {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
         }
-
-    .bulk {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
     }
-
-}
 
 @media (max-width: 450px) {
-    .bulk-pics {
-        padding: .5rem;
-
-    }
-    .navbar {
-        font-size: 1rem;
-        line-height: 1rem;
-
-    }
-    .MINE-rundown {
-        line-height: 1rem;
-    }
     h2 {
         font-size: 1rem;
     } 
     li { 
         font-size: .5rem;
     }
-
+    .navbar {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .MINE-rundown {
+        line-height: 1rem;
+    }
+    .bulk-pics {
+        padding: .5rem;
+    }
 }

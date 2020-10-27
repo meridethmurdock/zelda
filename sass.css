@@ -2,6 +2,10 @@ html {
   color: black !important;
 }
 
+h2 {
+  font-size: 1.6rem;
+}
+
 h3 {
   padding-top: 5rem;
 }
@@ -15,7 +19,7 @@ a:hover {
 }
 
 .navbar {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +28,7 @@ a:hover {
           justify-content: space-evenly;
   background-color: #f5e3e3 !important;
   font-family: "Turret Road", cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .navbar-brand {
@@ -50,7 +54,7 @@ a:hover {
 .MINE-table-of-contents {
   border: 1px black solid;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 28%;
   margin: 3rem 2rem;
   display: -webkit-box;
@@ -63,12 +67,8 @@ a:hover {
   height: 10%;
   background-color: rgba(222, 233, 220, 0.726) !important;
   font-family: "Turret Road", cursive;
-  font-size: 1.2rem;
-  line-height: 2rem;
-}
-
-.MINE-big-title {
-  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
 }
 
 .MINE-nav-buttons {
@@ -78,16 +78,20 @@ a:hover {
 .MINE-title-nav {
   background-color: rgba(222, 233, 220, 0.726);
   margin: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 10px;
-  padding: 3rem;
+  padding: 2rem;
   border: 3px darkslategrey solid;
+}
+
+.MINE-big-title {
+  text-align: center;
 }
 
 .MINE-rundown {
   border: 1px black solid;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 28%;
   margin: 3rem 2rem;
   display: -webkit-box;
@@ -103,13 +107,17 @@ a:hover {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 3rem;
+}
+
+.rundown-img {
+  width: 10%;
 }
 
 .MINE-middle-column {
   background-color: rgba(38, 58, 17, 0.685);
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .MINE-nav-buttons {
@@ -119,15 +127,33 @@ a:hover {
 }
 
 .MINE-button {
-  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prev-icon,
+.next-icon {
+  opacity: 40%;
+  width: 8%;
+}
+
+.next-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .bulk {
   background-color: rgba(222, 233, 220, 0.726);
   margin: 2rem;
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 10px;
-  font-size: 1.3rem !important;
+  font-size: 1.3rem;
   margin: 0 auto;
 }
 
@@ -141,24 +167,39 @@ a:hover {
   padding: 3rem;
 }
 
-@media (min-width: 1300px) {
+.nav-buttons-end {
+  padding: 0rem;
+  margin: 2rem !important;
+  background-color: rgba(222, 233, 220, 0.726);
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: rgba(222, 233, 220, 0.726);
+  width: 100;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1199px) {
   .hidden-desktop {
     display: none !important;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1199px) {
   .hidden-mobile {
     display: none !important;
   }
-  .MINE-whole {
-    display: inline;
-  }
   hr {
     display: none;
-  }
-  h2 {
-    font-size: 1.5rem;
   }
   p {
     padding-top: 1rem;
@@ -166,12 +207,28 @@ a:hover {
   .navbar {
     font-size: 2rem;
   }
+  .MINE-whole {
+    display: inline;
+  }
   .MINE-dropdown-button {
     display: block;
     width: 100%;
     margin: 0 auto;
     border: 2px green solid;
     padding: 1rem;
+  }
+  .MINE-nav-buttons {
+    margin: 1rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem;
+  }
+  .MINE-button {
+    width: 50%;
   }
   .MINE-title-nav {
     margin: 1rem;
@@ -194,19 +251,6 @@ a:hover {
     padding: 0rem;
     margin: auto;
   }
-  .MINE-nav-buttons {
-    margin: 1rem auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem;
-  }
-  .MINE-button {
-    width: 50%;
-  }
   .bulk {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -220,8 +264,11 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .bulk-pics {
-    padding: .5rem;
+  h2 {
+    font-size: 1rem;
+  }
+  li {
+    font-size: .5rem;
   }
   .navbar {
     font-size: 1rem;
@@ -230,11 +277,8 @@ a:hover {
   .MINE-rundown {
     line-height: 1rem;
   }
-  h2 {
-    font-size: 1rem;
-  }
-  li {
-    font-size: .5rem;
+  .bulk-pics {
+    padding: .5rem;
   }
 }
 /*# sourceMappingURL=sass.css.map */
